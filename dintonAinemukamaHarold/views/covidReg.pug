@@ -20,7 +20,7 @@ html
                     span.p-2.bg-success.text-white.m-auto#success(style="display: none; width: 90%;")
                         | Registration was successful! 
                         i.fa.fa-times.ms-5(onclick="focusFunction()")
-                form.form-container(action, name="registrationForm", onsubmit="return validation()")
+                form.form-container(method="POST", action="/" name="registrationForm", onsubmit="return validation()")
                     .row
                         .col.mb-3
                             label(for) Surname
@@ -55,13 +55,13 @@ html
                             label(for="gender") Gender
                         .row.mb-3
                             .col.form-check.ms-3
-                                input.form-check-input#flexRadioDefault1(type="radio", name="gender", onfocus="focusFunction()", checked)
+                                input.form-check-input#flexRadioDefault1(type="radio", name="gender",value="Male" onfocus="focusFunction()", checked)
                                 label.form-check-label(for="flexRadioDefault1").
                             
                                 |Male
                             
                             .col.form-check
-                                input.form-check-input#flexRadioDefault2(type="radio", name="gender", onfocus="focusFunction()")
+                                input.form-check-input#flexRadioDefault2(type="radio", name="gender", value="Female" onfocus="focusFunction()")
                                 label.form-check-label(for="flexRadioDefault2").
                                 
                                 |Female
