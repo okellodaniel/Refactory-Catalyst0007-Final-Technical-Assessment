@@ -1,4 +1,4 @@
-// Access fields by name
+// Access fields
 const surname = document.covid_form.surname;
 const giv = document.covid_form.first_name;
 const dOB = document.covid_form.dob;
@@ -8,7 +8,7 @@ const nat = document.covid_form.nationality;
 const gen = document.covid_form.gender;
 const cat = document.covid_form.category;
 
-//Regular expressions are rules or requirements for the given fields
+//regex
 const nameRegex = /([A-Za-z]){1,16}/;
 const residenceRegex = /([A-Za-z]){1,20}/;
 const moreRegex = /([A-Za-z]){5,50}/;
@@ -189,7 +189,7 @@ var givenName = () => {
  };
 
  //handle all functions
- var validation = ()=>{
+ var validate = ()=>{
      if(surName());
      if(givenName());
      if(dateOfBirth());
@@ -200,6 +200,6 @@ var givenName = () => {
      if(occupation());
  };
 
- document.addEventListener('submit',validation);
+ document.addEventListener('submit',validate);
 
 
