@@ -1,0 +1,23 @@
+{
+  "name": "refactory-catalyst0007-final-technical-assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TovikMay/Refactory-Catalyst0007-Final-Technical-Assessment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TovikMay/Refactory-Catalyst0007-Final-Technical-Assessment/issues"
+  },
+  "homepage": "https://github.com/TovikMay/Refactory-Catalyst0007-Final-Technical-Assessment#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
+  }
+}

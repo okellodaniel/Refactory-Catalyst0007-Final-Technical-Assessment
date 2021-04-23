@@ -1,0 +1,54 @@
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl", crossorigin="anonymous")
+link(rel="stylesheet", href="index.css")
+.row.justify-content-center
+  .col-md-6
+    .card-body
+      header.card-header
+        img(src="/system-images/form-header-image.png")
+      form(method="POST", action="/contact")
+        div
+          h1 Ministry of health
+          h2 COVID-19 (CORONA VIRUS)
+          h3 Virus-Test Registration Form
+        .form-row
+          .col.form-group
+            label Surname
+            input.form-control(name="surname")
+        .form-row
+          .col.form-group
+            label Givenname
+            input.form-control(name="givenname")
+        .form-row(action="/action_page.php")
+          .col.form-group
+            label(for="birthday") Date of birth
+            input#birthday(type="date", name="birthday")
+        .form-row
+          .col.form-group
+            label Place of residence
+            input.form-control(name="place of residence")
+        .form-row
+          .col.form-group
+            label Occupation
+            input.form-control(name="occupation")
+        .form-row
+          .col.form-group
+            label Nationality
+            input.form-control(name="nationality")
+        .form-row
+          input(type="radio", name="gender", value="male", form="myForm")
+          |  Male
+
+          input(type="radio", name="gender", value="female", form="myForm")
+          |  Female
+        .col-md-6
+          label.form-label(for="validationCustomUsername") Category
+          select.form-select(aria-label="Default select example", name="category")
+            option(selected) --Select Category--
+            option(value="1") Vaccinated
+            option(value="2") Not Vaccinated
+        .form-row
+          .col.form-group
+            button.btn.btn-primary.btn-block Register
