@@ -1,0 +1,74 @@
+@import url('http://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+.card{
+  
+  
+  left:30%;
+}
+h2{
+  text-align: center;
+  font-weight:bold ;
+  font-family:Arial Black;
+}
+h5{
+  text-align:center;
+  font-family:Arial Narrow;
+  font-size: 25px;
+}
+.alert{
+  border-bottom: 0rem;
+}
+.card-header{
+  background: url(/images/form-header-image.png) no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 100px;
+ 
+}
+
+img {
+  border: none;
+  border-radius: 0px;
+  padding: 2px;
+  width: 620px;
+  height:100px;
+  
+}
+
+.col-12{
+  text-align:right;
+}
+.btn-primary{
+  width:50%;
+}
+.card-body{
+  font-family:Arial Narrow;
+  color:rgb(22, 22, 22);
+  font-size: 20px;
+  font-weight: 550;
+ 
+}
+.form-label {
+  /*margin-bottom: -5px; */
+   margin-bottom: 0px;
+   margin-top:0px;
+ }
+ .form-input{
+   margin-bottom: 0px;
+ }
+.option {
+  text-align:center;
+}
+.warnP{
+  margin-top: 0px;
+  color: red;
+  font-family:Arial Narrow;
+
+}
+.alert{
+  visibility: hidden;
+}
+div
+   {
+      margin-bottom:0px;
+      margin-bottom:0px;  
+   }

@@ -1,4 +1,11 @@
-
-#Ignoring the modules within my project
 /DanielOkello/node_modules
-
+/Joanita/node_modules/
+node_modules
+.env
+/Akena-fareal/project-test/node-modules
+/David-Odie/node_modules/
+/Hassan_Bahati_Mukisa/node_modules/
+WereSamson/
+node_modules
+hazelWere/node_modules/
+dintonAinemukamaHarold/node_modules/

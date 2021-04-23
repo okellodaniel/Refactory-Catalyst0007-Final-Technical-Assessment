@@ -1,0 +1,30 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+h3 {
+    text-align: center;
+}
+
+.covid {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.toprow {
+    min-height: 750px;
+    border-color: 2px solid black;
+    border-radius: 8px;
+    margin: 1% auto;
+    padding: 20px;
+}
+.button {
+    width: 80px;
+}
+
+.error {
+    font-size:15px; 
+    color:red;
+}
