@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/styles/stylesheet.css">
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <form action="/" method="POST" onsubmit="" name="">
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="../../system-images/form-header-image.png" alt="Form Header">
+                </div>
+                <div class="col-md-12">
+                    <h4>Ministry of Health</h4>
+                    <h2>Covid-19 (Corona virus)</h2>
+                    <h4>Virus-Test Registration Form</h4>
+                </div>
+                <div class="col-md-6">
+                    <label>Surname</label>
+                    <input type="text" name="surName" class="form-control">
+                    <span class="errorMessage" id="sur"></span>
+                </div>
+                <div class="col-md-6">
+                    <label>Given Name</label>
+                    <input type="text" name="givName" class="form-control">
+                    <span class="errorMessage" id="giv"></span>
+                </div>
+                <div class="col-md-6">
+                    <label> Date of Birth </label>
+                    <input type="date" name="dOB" class="form-control">
+                    <span class="errorMessage" id="DOB"></span>
+                </div>
+                <div class="col-md-6">
+                    <label >Place of Residence</label>
+                    <input type="text" name="residence" class="form-control">
+                    <span class="errorMessage" id="res"></span>
+                </div>
+                <div class="col-md-6">
+                    <label> Occupation</label>
+                    <input type="text" name="occupation" class="form-control">
+                    <span class="errorMessage" id="occ"></span>
+                </div>
+                <div class="col-md-6">
+                    <label> Nationality</label>
+                    <input type="text" name=nationality" class="form-control">
+                    <span class="errorMessage" id="nat"></span>
+                </div>
+                <div class="col-md-12" style="margin-top: 15px; border-bottom: 1px solid gray;">
+                    <h5>Gender</h5>
+                </div>
+                <div class="col-md-6">
+                    <input class="form-check-input" type="radio" name="gender" value="Male" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">Male</label>
+                </div>
+                <div class="col-md-6">
+                    <input class="form-check-input" type="radio" name="gender" value="Female" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">Female</label>
+                </div>
+                <div class="col-md-12" style="margin-top: 15px;">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>--Select Category</option>
+                        <option value="Returnee">Returnee</option>
+                        <option value="Contact">Contact</option>
+                        <option value="Alert">Alert</option>
+                        <option value="Volunteer">Volunteer</option>
+                      </select>
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary"> Register</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

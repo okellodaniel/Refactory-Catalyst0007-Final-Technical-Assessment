@@ -1,0 +1,60 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/styles/stylesheet.css')
+    title
+  body
+    .container
+      form(action='/' method='POST' onsubmit='' name='')
+        .row
+          .col-md-12.d-flex.justify-content-center
+            img(src='../../system-images/form-header-image.png' alt='Form Header')
+          .col-md-12
+            h4 Ministry of Health
+            h2 Covid-19 (Corona virus)
+            h4 Virus-Test Registration Form
+          .col-md-6
+            label Surname
+            input.form-control(type='text' name='surName')
+            span#sur.errorMessage
+          .col-md-6
+            label Given Name
+            input.form-control(type='text' name='givName')
+            span#giv.errorMessage
+          .col-md-6
+            label  Date of Birth 
+            input.form-control(type='date' name='dOB')
+            span#DOB.errorMessage
+          .col-md-6
+            label Place of Residence
+            input.form-control(type='text' name='residence')
+            span#res.errorMessage
+          .col-md-6
+            label  Occupation
+            input.form-control(type='text' name='occupation')
+            span#occ.errorMessage
+          .col-md-6
+            label  Nationality
+            input.form-control(type='text' name='nationality"')
+            span#nat.errorMessage
+          .col-md-12(style='margin-top: 15px; border-bottom: 1px solid gray;')
+            h5 Gender
+          .col-md-6
+            input#flexRadioDefault2.form-check-input(type='radio' name='gender' value='Male' checked='')
+            label.form-check-label(for='flexRadioDefault2') Male
+          .col-md-6
+            input#flexRadioDefault2.form-check-input(type='radio' name='gender' value='Female')
+            label.form-check-label(for='flexRadioDefault2') Female
+          .col-md-12(style='margin-top: 15px;')
+            select.form-select(aria-label='Default select example')
+              option(selected='') --Select Category--
+              option(value='Returnee') Returnee
+              option(value='Contact') Contact
+              option(value='Alert') Alert
+              option(value='Volunteer') Volunteer
+          .col-md-12
+            button.btn.btn-primary(type='submit')  Register

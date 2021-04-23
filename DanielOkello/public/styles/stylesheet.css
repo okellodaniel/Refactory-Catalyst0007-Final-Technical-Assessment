@@ -1,0 +1,44 @@
+
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            max-width: 740px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .col-md-6{
+            min-width: 300px;
+            margin-top: 15px;
+        }
+        .col-col-md-12{
+            min-width: 600px;
+            margin-top: 15px;            
+        }
+
+      
+        form{
+            border: 1px solid  gray;
+            margin:4% auto;
+            padding: 15px;
+        }
+        img{
+            margin: 0;
+        }
+
+        h4,h2{
+            text-align: center;
+        }
+        h2{
+            font-weight:bolder;
+            text-transform: uppercase;
+        }
+
+        button{
+            float: right;
+            width: 250px;
+            margin:30px;
+        }
