@@ -1,11 +1,11 @@
 // Access fields by name
-const sur = document.covid_form.surname;
-const giv = document.covid_form.first_name;
-const dOB = document.covid_form.dob;
+const surN = document.covid_form.surname;
+const givN = document.covid_form.first_name;
+const dOB1 = document.covid_form.dob;
 const res = document.covid_form.residence;
-const occ = document.covid_form.occupation;
-const nat = document.covid_form.nationality;
-const gen = document.covid_form.gender;
+const occp= document.covid_form.occupation;
+const nat1 = document.covid_form.nationality;
+const gen1 = document.covid_form.gender;
 const cat = document.covid_form.category;
 
 //Regular expressions are rules or requirements for the given fields
@@ -14,17 +14,17 @@ const residenceRegex = /([A-Za-z]){1,20}/;
 const moreRegex = /([A-Za-z]){5,50}/;
 
 //Error Messages
-const surErr = (message)=>{
+const surNErr = (message)=>{
     let sur_Err = document.getElementById('surerr');
     sur_Err.innerText = message;
 }
 
-const givErr = (message)=>{
+const givNErr = (message)=>{
     let giv_Err = document.getElementById('fnamerr');
     giv_Err.innerText = message;
 }
 
-const dOBErr = (message)=>{
+const dOB1Err = (message)=>{
     let dOB_Err = document.getElementById('daterr');
     dOB_Err.innerText = message;
 }
@@ -33,17 +33,17 @@ const resErr = (message)=>{
     res_Err.innerText = message;
 }
 
-const occErr = (message)=>{
+const occpErr = (message)=>{
     let occ_Err = document.getElementById('occErr');
     occ_Err.innerText = message;
 }
 
-const natErr = (message)=>{
+const nat1Err = (message)=>{
     let nat_Err = document.getElementById('naterr');
     nat_Err.innerText = message;
 }
 
-const gend_Err = (message)=>{
+const gend1_Err = (message)=>{
     let ma_Err = document.getElementById('generr');
     ma_Err.innerText = message;
 }
@@ -55,63 +55,54 @@ const catErr = (message)=>{
 
 //Validation
 var surName = () => {
-   if (sur.value == '') {
-    surErr('Please enter surname');
-    sur.style.border = '2px solid red';
+   if (surN.value == '') {
+    surNErr('Please enter surname');
+    surN.style.border = '2px solid red';
     event.preventDefault();
-    sur.focus();
+    surN.focus();
     return false;
    } 
 
-   if (sur.value.match (nameRegex)) {
+   if (surN.value.match (nameRegex)) {
        return true;
    }
    else {
-    sur.style.border = '2px solid red';
+    surN.style.border = '2px solid red';
     event.preventDefault();
-    sur.focus();
+    surN.focus();
     return false;
    }
 };
 
 var givenName = () => {
-    if (giv.value == '') {
-     givErr('Please enter first name');
-     giv.style.border = '2px solid red';
+    if (givN.value == '') {
+     givNErr('Please enter first name');
+     givN.style.border = '2px solid red';
      event.preventDefault();
-     giv.focus();
+     givN.focus();
      return false;
     } 
  
-    if (giv.value.match (nameRegex)) {
+    if (givN.value.match (nameRegex)) {
         return true;
     }
     else {
-     giv.style.border = '2px solid red';
+     givN.style.border = '2px solid red';
      event.preventDefault();
-     giv.focus();
+     givN.focus();
      return false;
     }
  };
 
  var dateOfBirth = () => {
-    if (dOB.value == '') {
-     dOBErr('Please select date of birth');
-     dOB.style.border = '2px solid red';
+    if (dOB1.value == '') {
+     dOB1Err('Please select date of birth');
+     dOB1.style.border = '2px solid red';
      event.preventDefault();
-     dOB.focus();
+     dOB1.focus();
      return false;
     } 
  
-    // if (dOB.value.match ()) {
-    //     return true;
-    // }
-    // else {
-    //  dOB.style.border = '2px solid red';
-    //  event.preventDefault();
-    //  dOB.focus();
-    //  return false;
-    // }
  }
 
  var placeOfRes = () => {
@@ -135,83 +126,64 @@ var givenName = () => {
  }
 
  var occupation = () => {
-    if (occ.value == '') {
-     occErr('Please enter occupation');
-     occ.style.border = '2px solid red';
+    if (occp.value == '') {
+     occpErr('Please enter occupation');
+     occp.style.border = '2px solid red';
      event.preventDefault();
-     occ.focus();
+     occp.focus();
      return false;
     } 
  
-    if (occ.value.match (nameRegex)) {
+    if (occp.value.match (nameRegex)) {
         return true;
     }
     else {
-     occ.style.border = '2px solid red';
+     occp.style.border = '2px solid red';
      event.preventDefault();
-     occ.focus();
+     occp.focus();
      return false;
     }
  }
 
  var nationality = () => {
-    if (nat.value == '') {
-     natErr('Please enter nationality');
-     nat.style.border = '2px solid red';
+    if (nat1.value == '') {
+     nat1Err('Please enter nationality');
+     nat1.style.border = '2px solid red';
      event.preventDefault();
-     nat.focus();
+     nat1.focus();
      return false;
     } 
  
-    if (nat.value.match (nameRegex)) {
+    if (nat1.value.match (nameRegex)) {
         return true;
     }
     else {
-     nat.style.border = '2px solid red';
+     nat1.style.border = '2px solid red';
      event.preventDefault();
-     nat.focus();
+     nat1.focus();
      return false;
     }
  };
 
  var gender = () => {
-    if (gen.value === "default") {
-     genErr('Please select gender');
-    //gen.style.border = '2px solid red';
+    if (gen1.value === "default") {
+     gen1Err('Please select gender');
+    // gen1.style.border = '2px solid red';
     event.preventDefault();
-    gen.focus();
+    gen1.focus();
      return false;
     } 
- 
-    // if (get.value.match (nameRegex)) {
-    //     return true;
-    // }
-    // else {
-    //  gen.style.border = '2px solid red';
-    //  event.preventDefault();
-    //  gen.focus();
-    //  return false;
-    // }
  };
 
  var category = () => {
     if (cat.value == '--Select Category--') {
-     catErr('Please select option');
-     //cat.style.border = '2px solid red';
+    //  catErr('Please select option');
+     cat.style.border = '2px solid red';
      event.preventDefault();
      cat.focus();
-     return false;
+     return true;
     } 
  
-    // if (cat.value.match (nameRegex)) {
-    //     return true;
-    // }
-    // else {
-    //  cat.style.border = '2px solid red';
-    //  event.preventDefault();
-    //  cat.focus();
-    //  return false;
-    // }
  };
 
  //Call back all the functions above as event handlers
