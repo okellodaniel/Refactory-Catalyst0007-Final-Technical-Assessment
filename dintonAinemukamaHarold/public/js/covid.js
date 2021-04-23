@@ -85,6 +85,10 @@ let validation = ()=>{
         document.getElementById('error7').style.display ="block"
         return false
     }
+    else{
+        document.getElementById('success').style.display ="block"
+        return true
+    }
     
 
     
@@ -94,3 +98,4 @@ let validation = ()=>{
 let focusFunction =()=>{
     document.getElementById("success").style.display = "none";
 }
+
