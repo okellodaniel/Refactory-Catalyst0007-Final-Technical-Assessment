@@ -1,0 +1,81 @@
+doctype html 
+html 
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width,initial-scale=1")
+        title=title
+        link(rel="stylesheet", href="/stylesheet/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/stylesheet/covid.css")
+        link(rel="stylesheet", href="/static/all.css")
+    body
+        .container-fluid
+            .border.border-1.mt-2.mb-5.container
+                .row.text-center.mb-3
+                    img(src="images/form-header-image.png", alt="logo", style="width: 100%; height: 100%")
+                    h3 Ministry of Health
+                    h1.h1 COVID-19 (CORONA VIRUS)
+                    h3 Virus -Test Registration Form
+                .row
+                    span.p-2.bg-success.text-white.m-auto#success(style="display: none; width: 90%;")
+                        | Registration was successful! 
+                        i.fa.fa-times.ms-5(onclick="focusFunction()")
+                form.form-container(action, name="registrationForm", onsubmit="return validation()")
+                    .row
+                        .col.mb-3
+                            label(for) Surname
+                            input.form-control(type="text", onfocus="focusFunction()", name="surname")
+                            #error1(style="color: red; display: none; font-weight: bolder;") This field is required
+                        .col.mb-3
+                            label(for="inputPassword2") Given name
+                            input.form-control(type="text", onfocus="focusFunction()", name="givenName")
+                            #error2(style="color: red; display: none; font-weight: bolder;") This field is required
+                    .row
+                        .col.mb-3
+                            label(for="dob") Date of Birth
+                            input.form-control(type="date", onfocus="focusFunction()", name="dob")
+                            #error3(style="color: red; display: none; font-weight: bolder;") Select Date of Birth
+                            #error8(style="color: red; display: none; font-weight: bolder;") Patient must be above 1 year old
+                            #error9(style="color: red; display: none; font-weight: bolder;") Patient must be below 150 years old
+                        .col.mb-3
+                            label(for="residence") Place of Residence
+                            input.form-control(type="text", onfocus="focusFunction()", name="residence")
+                            #error4(style="color: red; display: none; font-weight: bolder;") This field is required
+                    .row
+                        .col.mb-3
+                            label(for="occupation") Occupation
+                            input.form-control(type="text", onfocus="focusFunction()", name="occupation")
+                            #error5(style="color: red; display: none; font-weight: bolder;") This field is required
+                        .col.mb-3
+                            label(for="nationality") Nationality
+                            input.form-control(type="text", onfocus="focusFunction()", name="nationality")
+                            #error6(style="color: red; display: none; font-weight: bolder;") This field is required
+                    .mb-3
+                        .border-bottom.border-1.mb-2
+                            label(for="gender") Gender
+                        .row.mb-3
+                            .col.form-check.ms-3
+                                input.form-check-input#flexRadioDefault1(type="radio", name="gender", onfocus="focusFunction()", checked)
+                                label.form-check-label(for="flexRadioDefault1").
+                            
+                                |Male
+                            
+                            .col.form-check
+                                input.form-check-input#flexRadioDefault2(type="radio", name="gender", onfocus="focusFunction()")
+                                label.form-check-label(for="flexRadioDefault2").
+                                
+                                |Female
+                            
+                    .mb-5.form-group
+                        select.form-select(aria-label="Default select example", name="category", onfocus="focusFunction()")
+                            option(value="default", selected, hidden, disabled) --Select Category--
+                            option(value="returnee") Returnee
+                            option(value="contact") Contact
+                            option(value="alert") Alert
+                            option(value="volunteer") Volunteer
+                        #error7(style="color: red; display: none; font-weight: bolder;") Select Patient Category
+                    .mb-2.d-flex.justify-content-end
+                        button.btn.btn-primary.btn-lg(type="submit") Register
+        script(src="js/bootstrap.bundle.js")
+        script(src="js/covid.js")
+        script(src="/static/all.js")

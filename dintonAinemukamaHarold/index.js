@@ -2,6 +2,7 @@
 const express =require('express')
 require('dotenv').config();
 const mongoose = require('mongoose');
+const pug = require('pug')
 
 //importing models
 require('./models/covidReg');
@@ -42,7 +43,9 @@ app.use(express.urlencoded({extended:true}));
 app.use('/',homeRoute)
 
 
-
+app.get('*',(req,res)=>{
+    res.send('Error')
+})
 
 
 
