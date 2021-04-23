@@ -1,7 +1,7 @@
-//Dependencies
+//imports
 const mongoose = require('mongoose');
-
-var covid_formSchema = new mongoose.Schema({
+//schema
+var covidSchema = new mongoose.Schema({
     surname:String,
     first_name:String,
     dob:Date,
@@ -13,5 +13,4 @@ var covid_formSchema = new mongoose.Schema({
 
 })
 
-module.exports = mongoose.model('Registered', covid_formSchema)
-
+module.exports = mongoose.model('Covid', covidSchema)

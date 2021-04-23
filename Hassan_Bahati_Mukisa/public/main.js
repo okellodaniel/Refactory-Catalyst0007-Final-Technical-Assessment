@@ -1,5 +1,5 @@
 // Access fields by name
-const sur = document.covid_form.surname;
+const surname = document.covid_form.surname;
 const giv = document.covid_form.first_name;
 const dOB = document.covid_form.dob;
 const res = document.covid_form.residence;
@@ -103,15 +103,6 @@ var givenName = () => {
      return false;
     } 
  
-    // if (dOB.value.match ()) {
-    //     return true;
-    // }
-    // else {
-    //  dOB.style.border = '2px solid red';
-    //  event.preventDefault();
-    //  dOB.focus();
-    //  return false;
-    // }
  }
 
  var placeOfRes = () => {
@@ -183,39 +174,22 @@ var givenName = () => {
      return false;
     } 
  
-    // if (get.value.match (nameRegex)) {
-    //     return true;
-    // }
-    // else {
-    //  gen.style.border = '2px solid red';
-    //  event.preventDefault();
-    //  gen.focus();
-    //  return false;
-    // }
  };
 
  var category = () => {
     if (cat.value == '--Select Category--') {
      catErr('Please select option');
-     //cat.style.border = '2px solid red';
+    //  cat.style.border = '2px solid red';
      event.preventDefault();
      cat.focus();
      return false;
     } 
  
-    // if (cat.value.match (nameRegex)) {
-    //     return true;
-    // }
-    // else {
-    //  cat.style.border = '2px solid red';
-    //  event.preventDefault();
-    //  cat.focus();
-    //  return false;
-    // }
+   
  };
 
- //Call back all the functions above as event handlers
- var validate = ()=>{
+ //handle all functions
+ var validation = ()=>{
      if(surName());
      if(givenName());
      if(dateOfBirth());
@@ -226,6 +200,6 @@ var givenName = () => {
      if(occupation());
  };
 
- document.addEventListener('submit',validate);
+ document.addEventListener('submit',validation);
 
 

@@ -1,52 +1,43 @@
-//Dependencies
+//imports
 const express = require ('express');
 const mongoose = require ('mongoose');
-
-//Requiring a route
-const covidRoute = require('./src/routes/homeRoute');
-
+const Route = require('./routes/covid');
 require ('dotenv').config();
-
-// Instatiate express with app
+// instantiating express
 const app = express()
 
-//Middleware handling data from the form
+//middleware
 app.use(express.urlencoded({
     extended:true
 })); 
-
-//middleware for serving static files
+//middleware for static files //images,css,js
 app.use(express.static('public'));
-//middleware serving images specifically
-//app.use('/public/images', express.static(__dirname + '/public/images'));
-
-
-//Middleware configurations 
+//setting pug as templeting engine
 app.set('views', 'views');
 app.set('view engine', 'pug');
 
 
-//Functions as handlers for Routes 
-app.use('/covid', covidRoute);
+//database connection
+mongoose.connect(process.env.DB, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+});  
 
-//Db connection configurations.
-mongoose.connect(process.env.DATABASE, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-  });  
+mongoose.connection
+.on('open', () => {
+  console.log('Mongoose connection open');
+})
+.on('error', (err) => {
+  console.log(`Connection error: ${err.message}`);
+});
 
-//Post connection to the database
-  mongoose.connection
-  .on('open', () => {
-    console.log('Mongoose connection open');
-  })
-  .on('error', (err) => {
-    console.log(`Connection error: ${err.message}`);
-  });
+//routing
+app.use('/hassan', Route);
 
 
+//port 
 app.listen(5000, () => {
     console.log("listening on port 5000");
 })
