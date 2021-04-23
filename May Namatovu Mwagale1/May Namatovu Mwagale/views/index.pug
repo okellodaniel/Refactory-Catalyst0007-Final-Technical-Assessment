@@ -1,0 +1,63 @@
+doctype 
+html 
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  meta(name="viewport", content="width=device-width,initial-scale=1")
+  link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css", integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6", crossorigin="anonymous")
+  link(rel="stylesheet", href="../May Namatovu Mwagale/index.css")
+  title Covid- 19 Registration Form
+body
+  .container
+    form(name="covid_form", action="#")
+      .row.xrow
+        .col-md-12
+        .col.col-md-12
+          img(src="/system-images/form-header-image.png", alt)
+          h3 Ministry of Health
+          h3.covid Covid-19 (Corona Virus)
+          h3 Ministry of Health
+        .col-md-6
+          label Surname
+          input.form-control(name="surname", type="text")
+          span.error#surerr
+        .col-md-6
+          label Given Name
+          input.form-control(name="first_name", type="text")
+          span.error#fnamerr
+        .col-md-6
+          label Date of Birth
+          input.form-control(name="dob", type="date")
+          span.error#daterr
+        .col-md-6
+          label Place of Residence
+          input.form-control(name="residence", type="text")
+          span.error#reserr
+        .col-md-6
+          label Occupation
+          input.form-control(name="occupation", type="text")
+          span.error#occErr
+        .col-md-6
+          label Nationality
+          input.form-control(name="nationality", type="text")
+          span.error#naterr
+        .row
+          label(style="border-bottom: 1px solid grey;") Gender
+          .col-md-6
+            label Male
+            input(type="radio", name="gender", value="male")
+          .col-md-6
+            label(for="female") Female
+            input(type="radio", name="gender", value="female")
+          span.error#generr
+        .col-md-12
+          select.form-control(name="category")
+            | 
+          Category
+            option(selected) --Select Category--
+            option(value="1") One
+            option(value="2") Two
+          span.error#caterr
+        button(style="color: white; background-color: rgb(30, 115, 212); border-radius: 20px;") Register
+script(src="./assess.js").
+    
+    
