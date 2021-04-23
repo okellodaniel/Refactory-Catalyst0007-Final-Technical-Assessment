@@ -1,0 +1,26 @@
+meta(charset='UTF-8')
+meta(name='viewport' content='width=device-width,initial-scale=1')
+meta(http-equiv='X-UA-Compatible' content='ie=edge')
+link(rel='stylesheet' href='../public/registration.css')
+title URA Registration
+.container
+  form#form.form(action method)
+    h2 URA Registration
+    .form-control
+      label(for='fullname') Full Name
+      input#fullname(type='text' placeholder='Enter Full Name')
+      small Error Message
+    .form-control
+      label(for='email') Email
+      input#email(type='text' placeholder='Enter email')
+      small Error Message
+    .form-control
+      label(for='password') Password
+      input#password(type='password' placeholder='Enter password')
+      small Error Message
+    .form-control
+      label(for='password2') Confirm Password
+      input#password2(type='password' placeholder='Re-enter password')
+      small Error Message
+    button(type='submit') Submit
+script(src='../public/registration.js')

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Uganda Revenue Authority</title>
+  <link rel="stylesheet" href="index.css">
+
+<body>
+  <header></header>
+  <nav>
+    <div class="toggle">
+      <span></span>
+    </div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Sign Up</a></li>
+      
+    </ul>
+
+  </nav>
+ <script>
+   $(document).ready(function () {
+      $('span').click(function () {
+        $('ul').toggleClass('active');
+        $('.toggle').toggleClass('togle');
+      })
+    })
+ </script>
+</body>
+
+</html>
