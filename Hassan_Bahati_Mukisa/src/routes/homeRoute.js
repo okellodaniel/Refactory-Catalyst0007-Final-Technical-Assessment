@@ -1,6 +1,6 @@
 //Require express
 const express = require('express');
-const Covid = require('../models/Covid')
+const Covid = require('../models/homeModel')
 
 //Create a router 
 const router = express.Router();
