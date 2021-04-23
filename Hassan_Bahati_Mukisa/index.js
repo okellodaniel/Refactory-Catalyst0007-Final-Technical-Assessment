@@ -1,43 +1,45 @@
-//imports
+//Dependencies
 const express = require ('express');
 const mongoose = require ('mongoose');
 const Route = require('./routes/covid');
 require ('dotenv').config();
-// instantiating express
+
+// instating express
 const app = express()
 
-//middleware
+//Middleware
 app.use(express.urlencoded({
     extended:true
 })); 
-//middleware for static files //images,css,js
 app.use(express.static('public'));
-//setting pug as templeting engine
+
+
+//Middleware configurations 
 app.set('views', 'views');
 app.set('view engine', 'pug');
 
 
-//database connection
-mongoose.connect(process.env.DB, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-});  
-
-mongoose.connection
-.on('open', () => {
-  console.log('Mongoose connection open');
-})
-.on('error', (err) => {
-  console.log(`Connection error: ${err.message}`);
-});
-
-//routing
+//routes
 app.use('/hassan', Route);
 
+//Db connection
+mongoose.connect(process.env.DB, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  });  
 
-//port 
+//db
+  mongoose.connection
+  .on('open', () => {
+    console.log('Mongoose connection open');
+  })
+  .on('error', (err) => {
+    console.log(`Connection error: ${err.message}`);
+  });
+
+
 app.listen(5000, () => {
     console.log("listening on port 5000");
 })
