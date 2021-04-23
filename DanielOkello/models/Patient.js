@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// Creation of the Patient Schema
 const patientSchema = new mongoose.Schema({
     surName:{
         type:String
@@ -14,7 +15,7 @@ const patientSchema = new mongoose.Schema({
     },
 
     residence:{
-        type:Sting
+        type:String
     },
 
     occupation:{

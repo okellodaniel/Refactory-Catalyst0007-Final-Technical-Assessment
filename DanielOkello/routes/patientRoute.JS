@@ -22,9 +22,8 @@ router.post('/', async(req,res)=>{
     catch(err){
         console.log(err);
         res.send('Error!, Something went wrong').status(400);
-    };
+    }
 });
 
 // Export the model
-
 module.exports = router;

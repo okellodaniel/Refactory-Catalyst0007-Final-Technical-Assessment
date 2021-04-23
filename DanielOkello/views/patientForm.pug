@@ -6,13 +6,13 @@ html(lang='en')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     link(rel='stylesheet' href='/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet' href='/styles/stylesheet.css')
-    title
+    title=`${title}`
   body
     .container
-      form(action='/' method='POST' onsubmit='' name='')
+      form(action='/' method='POST' onsubmit='return validation()' name='patientForm')
         .row
           .col-md-12.d-flex.justify-content-center
-            img(src='../../system-images/form-header-image.png' alt='Form Header')
+            img(src='/images/form-header-image.png' alt='Form Header')
           .col-md-12
             h4 Ministry of Health
             h2 Covid-19 (Corona virus)
@@ -43,12 +43,13 @@ html(lang='en')
             span#nat.errorMessage
           .col-md-12(style='margin-top: 15px; border-bottom: 1px solid gray;')
             h5 Gender
+            span#gen.errorMessage
           .col-md-6
-            input#flexRadioDefault2.form-check-input(type='radio' name='gender' value='Male' checked='')
-            label.form-check-label(for='flexRadioDefault2') Male
+            input.form-check-input(type='radio' name='gender' value='Male' checked='')
+            label.form-check-label Male
           .col-md-6
-            input#flexRadioDefault2.form-check-input(type='radio' name='gender' value='Female')
-            label.form-check-label(for='flexRadioDefault2') Female
+            input.form-check-input(type='radio' name='gender' value='Female')
+            label.form-check-label Female
           .col-md-12(style='margin-top: 15px;')
             select.form-select(aria-label='Default select example')
               option(selected='') --Select Category--
@@ -56,5 +57,7 @@ html(lang='en')
               option(value='Contact') Contact
               option(value='Alert') Alert
               option(value='Volunteer') Volunteer
+            span#catE.errorMessage
           .col-md-12
             button.btn.btn-primary(type='submit')  Register
+      script(src='/javascript/patientValidation.js')
