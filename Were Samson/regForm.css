@@ -1,4 +1,4 @@
-.formstyle {
+.body {
     background-color: #8e44ad;
     font-family: 'Open Sans', sans-serif;
     display: flex;
@@ -9,12 +9,17 @@
 }
 
 .container {
-    background-color: #f0f0f0;
+    float: inherit;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0.3);
     overflow: hidden;
-    width: 400px;
+    width: 800px;
     max-width: 100%;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    margin: 10px auto;
+    padding: 20px;
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .header {
